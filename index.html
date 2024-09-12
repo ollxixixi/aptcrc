@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data Display</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <!-- 顶部标题栏 -->
+    <header class="header">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1>Asia-Pacific Typhoon Collaborative Research Center Information Platform</h1>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" onclick="showModule('wind')">风场情况</a></li>
+            <li><a href="#" onclick="showModule('simulation')">模拟结果评估</a></li>
+        </ul>
+    </nav>
+
+    <!-- 模块内容 -->
+    <div class="content">
+        <!-- 风场情况模块 -->
+        <div id="wind" class="module">
+            <h2>风场情况</h2>
+            <img src="img/windField.jpg" alt="风场图">
+            <p>风速和风向数据的描述。</p>
+        </div>
+
+        <!-- 模拟结果评估模块 -->
+        <div id="simulation" class="module" style="display:none;">
+            <h2>模拟结果评估</h2>
+            <img src="img/retEvaluation.jpg" alt="模拟结果图">
+            <p>模拟结果分析和评估报告的描述。</p>
+        </div>
+    </div>
+
+</body>
+</html>
