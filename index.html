@@ -29,14 +29,54 @@
     <div class="content">
         <!-- 风场情况模块 -->
         <div id="wind" class="module">
-            <h2>风场情况</h2>
-            <img src="img/windField.jpg" alt="风场图">
-            <p>风速和风向数据的描述。</p>
+            <ul>
+                <li><a href="#" onclick="showField('windField')">台风风场展示</a></li>
+                <li><a href="#" onclick="showField('windSpeed')">目标位置风速演变</a></li>
+            </ul>
+            <div id="windField">
+                <div style="display: flex;">
+                    <div style="width: 33%;">
+                        <img src="img/windFieldA.jpg" alt="风场图">
+                        <div style="margin-left: 25%;">(a) 2024年9月6日16时</div>
+                    </div>
+                    <div style="width: 33%;">
+                        <img src="img/windFieldB.jpg" alt="风场图">
+                        <div style="margin-left: 25%;">(b) 9月6日16时20分 </div>
+                    </div>
+                    <div style="width: 33%;">
+                        <img src="img/windFieldC.jpg" alt="风场图">
+                        <div style="margin-left: 25%;">(c) 9月6日17时</div>
+                    </div>
+                </div>
+                <p style="text-align: center;">台风“摩羯”登陆前后台风风场与风电场位置 </p>
+                <p>填色与等值线：风速（m/s） <br>浅蓝色线条：中央气象台台风路径 
+                    <br>黑色星号：风电站位置 </p>
+            </div>
+            
+            <div style="text-align: center;" id="windSpeed">
+                <div >
+                    <img src="img/windSpeed Evolution1.jpg" alt="风场图">
+                    <div style="font-weight: bold;">图 1 逐时；2024090513-2024090720，
+                        共53小时；2024090617时刻最大风速，最大风速为59.37m/s
+                        (2 分钟平均，密度1.15千克/立方米) </div>
+                </div>
+                <div >
+                    <img src="img/windSpeed Evolution2.jpg" alt="风场图">
+                    <div style="font-weight: bold;">图 2 逐10分钟；06-16：00-06-18-7：50； 
+                        最大风速出现在17：00时刻，最大风速为59.37m/s
+                        (2分钟平均，密度1.15千克/立方米) </div>
+                </div>
+            </div>
         </div>
 
         <!-- 模拟结果评估模块 -->
         <div id="simulation" class="module" style="display:none;">
-            <h2>模拟结果评估</h2>
+            <ul>
+                <li><a href="#" onclick="showModule('wind')">台风强度模拟评估</a></li>
+                <li><a href="#" onclick="showModule('simulation')">风场模拟评估
+                </a></li>
+            </ul>
+
             <img src="img/retEvaluation.jpg" alt="模拟结果图">
             <p>模拟结果分析和评估报告的描述。</p>
         </div>
