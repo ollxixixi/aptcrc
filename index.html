@@ -14,13 +14,14 @@
     <!-- 顶部标题栏 -->
     <header class="header">
         <img src="img/logo.png" alt="Logo" class="logo">
-        <h1>Asia-Pacific Typhoon Collaborative Research Center Information Platform</h1>
+        <h1>亚太台风研究中心产品展示平台——台风"贝碧嘉"(样例)</h1>
     </header>
 
     <!-- 导航栏 -->
     <nav class="navbar">
         <ul>
             <li><a href="#" onclick="showModule('wind')">风场情况</a></li>
+            <li><a href="#" onclick="showModule('rain')">降水情况</a></li>
             <li><a href="#" onclick="showModule('simulation')">模拟结果评估</a></li>
         </ul>
     </nav>
@@ -34,7 +35,7 @@
                 <li><a href="#" onclick="showField('windSpeed')">目标位置风速演变</a></li>
             </ul>
             <div id="windField">
-                <div style="display: flex;">
+                <!-- <div style="display: flex;">
                     <div style="width: 33%;">
                         <img src="img/windFieldA.jpg" alt="风场图">
                         <div style="margin-left: 25%;">(a) 2024年9月6日16时</div>
@@ -50,11 +51,18 @@
                 </div>
                 <p style="text-align: center;">台风“摩羯”登陆前后台风风场与风电场位置 </p>
                 <p>填色与等值线：风速（m/s） <br>浅蓝色线条：中央气象台台风路径 
-                    <br>黑色星号：风电站位置 </p>
+                    <br>黑色星号：风电站位置 </p> -->
+                
+                <div style="text-align: center;">
+                    <img src="img/windField.gif" alt="2024年9月15日23时-16日05时" 
+                        style="max-width: 80%;">
+                    <div>台风“贝碧嘉”风场预报产品</div>
+                    <p>符号说明：“*”洋山深水港客运站位置 <br> 浅蓝色为预报台风路径</p>   
+                </div>
             </div>
             
-            <div style="text-align: center; display: none;" id="windSpeed">
-                <div >
+            <div id="windSpeed" style="text-align: center; display: none;">
+                <!-- <div >
                     <img src="img/windSpeedEvolution1.jpg" alt="风场图">
                     <div style="font-weight: bold;">图 1 逐时；2024090513-2024090720，
                         共53小时；2024090617时刻最大风速，最大风速为59.37m/s
@@ -65,7 +73,49 @@
                     <div style="font-weight: bold;">图 2 逐10分钟；06-16：00-06-18-7：50； 
                         最大风速出现在17：00时刻，最大风速为59.37m/s
                         (2分钟平均，密度1.15千克/立方米) </div>
+                </div> -->
+                <div >
+                    <img src="img/windSpeedEvolution.jpg" alt="风场图">
+                    <div style="">台风“贝碧嘉”期间洋山深水港客运站风速演变<br>
+                          2024年9月15日23时-16日05时 <br>
+                           <b>最大风速38.45m/s，出现在9月16日01时</b>
+                    </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- 降水情况模块 -->
+        <div id="rain" class="module" style="display:none;">
+            <ul>
+                <li><a href="#" onclick="showField('oneHour')">一小时累积降水</a></li>
+                <li><a href="#" onclick="showField('threeHour')">三小时累积降水</a></li>
+                <li><a href="#" onclick="showField('sixHour')">六小时累积降水</a></li>
+            </ul>
+            <div id="oneHour" style="text-align: center;" >
+                <div>
+                    <img src="img/rain1.gif" alt="2024年9月14日3时45分-11时" 
+                    style="max-width: 60%;">
+                    <div>台风“贝碧嘉”降水反演产品</div>
+                </div>
+                <p>2024年9月14日3时45分-11时<br>符号说明：“*”为台风对应时次位置</p>
+            </div>
+
+            <div id="threeHour" style="text-align: center; display: none;" >
+                <div>
+                    <img src="img/rain3.jpg" alt="2024年9月14日11时3小时累积降水" 
+                    style="max-width: 100%;">
+                    <div>台风“贝碧嘉”降水反演产品</div>
+                </div>
+                <p>2024年9月14日11时3小时累积降水</p>
+            </div>
+            
+            <div id="sixHour" style="text-align: center; display: none;">
+                <div>
+                    <img src="img/rain6.jpg" alt="2024年9月14日11时6小时累积降水" 
+                    style="max-width: 100%;">
+                    <div>台风“贝碧嘉”降水反演产品</div>
+                </div>
+                <p>2024年9月14日11时6小时累积降水</p>
             </div>
         </div>
 
@@ -76,13 +126,19 @@
                 <li><a href="#" onclick="showField('windSimuEva')">风场模拟评估</a></li>
             </ul>
             <div style="text-align: center;" id="tyIntensity">
-                <div >
+                <!-- <div >
                     <img src="img/tyIntensityEva1.jpg" alt="风场图">
                     <div style="font-weight: bold;">图1 根据中央气象台台风网提供的数据</div>
                 </div>
                 <div >
                     <img src="img/tyIntensityEva2.jpg" alt="风场图">
                     <div style="font-weight: bold;">图2 逐10分钟；2024090616-2024090618；根据中央气象台台风网提供的数据</div>
+                </div> -->
+                <div >
+                    <img src="img/tyIntensityEva.jpg" alt="风场图">
+                    <div style="">模拟台风强度与中央气象台台风强度对比<br>
+                        2024年9月15日23时-16日05时
+                    </div>
                 </div>
             </div>
         </div>
